@@ -1,0 +1,519 @@
+1675949117620 : TimeoutError: Navigation timeout of 30000 ms exceeded
+    at LifecycleWatcher._LifecycleWatcher_createTimeoutPromise (C:\Users\kuo\Desktop\animateGetter\node_modules\puppeteer-core\src\common\LifecycleWatcher.ts:257:12)
+    at async Frame.goto (C:\Users\kuo\Desktop\animateGetter\node_modules\puppeteer-core\src\common\Frame.ts:314:17)
+    at async CDPPage.goto (C:\Users\kuo\Desktop\animateGetter\node_modules\puppeteer-core\src\common\Page.ts:908:12)
+1675949143412 : TimeoutError: Navigation timeout of 30000 ms exceeded
+    at LifecycleWatcher._LifecycleWatcher_createTimeoutPromise (C:\Users\kuo\Desktop\animateGetter\node_modules\puppeteer-core\src\common\LifecycleWatcher.ts:257:12)
+    at async Frame.goto (C:\Users\kuo\Desktop\animateGetter\node_modules\puppeteer-core\src\common\Frame.ts:314:17)
+    at async CDPPage.goto (C:\Users\kuo\Desktop\animateGetter\node_modules\puppeteer-core\src\common\Page.ts:908:12)
+1675949657131 : TimeoutError: Navigation timeout of 30000 ms exceeded
+    at LifecycleWatcher._LifecycleWatcher_createTimeoutPromise (C:\Users\kuo\Desktop\animateGetter\node_modules\puppeteer-core\src\common\LifecycleWatcher.ts:257:12)
+    at async Frame.goto (C:\Users\kuo\Desktop\animateGetter\node_modules\puppeteer-core\src\common\Frame.ts:314:17)
+    at async CDPPage.goto (C:\Users\kuo\Desktop\animateGetter\node_modules\puppeteer-core\src\common\Page.ts:908:12)
+1675949678109 : TypeError: Cannot read properties of undefined (reading '0')
+    at Anime1.<anonymous> (C:\Users\kuo\Desktop\animateGetter\src\services\anime1.ts:68:64)
+    at Generator.next (<anonymous>)
+    at C:\Users\kuo\Desktop\animateGetter\src\services\anime1.ts:8:71
+    at new Promise (<anonymous>)
+    at C:\Users\kuo\Desktop\animateGetter\src\services\anime1.ts:4:12
+    at Anime1.preDownload (C:\Users\kuo\Desktop\animateGetter\src\services\anime1.ts:65:16)
+    at C:\Users\kuo\Desktop\animateGetter\src\ws\indexWS.ts:27:24
+    at Generator.next (<anonymous>)
+    at C:\Users\kuo\Desktop\animateGetter\src\ws\indexWS.ts:8:71
+    at new Promise (<anonymous>)
+1675949678113 : TypeError: Cannot read properties of undefined (reading 'mp4Url')
+    at Anime1.<anonymous> (C:\Users\kuo\Desktop\animateGetter\src\services\anime1.ts:103:43)
+    at Generator.next (<anonymous>)
+    at C:\Users\kuo\Desktop\animateGetter\src\services\anime1.ts:8:71
+    at new Promise (<anonymous>)
+    at C:\Users\kuo\Desktop\animateGetter\src\services\anime1.ts:4:12
+    at Anime1.download (C:\Users\kuo\Desktop\animateGetter\src\services\anime1.ts:100:16)
+    at C:\Users\kuo\Desktop\animateGetter\src\ws\indexWS.ts:28:18
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\kuo\Desktop\animateGetter\src\ws\indexWS.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+1675949772780 : TypeError: Cannot read properties of undefined (reading '0')
+    at Anime1.<anonymous> (C:\Users\kuo\Desktop\animateGetter\src\services\anime1.ts:68:64)
+    at Generator.next (<anonymous>)
+    at C:\Users\kuo\Desktop\animateGetter\src\services\anime1.ts:8:71
+    at new Promise (<anonymous>)
+    at C:\Users\kuo\Desktop\animateGetter\src\services\anime1.ts:4:12
+    at Anime1.preDownload (C:\Users\kuo\Desktop\animateGetter\src\services\anime1.ts:65:16)
+    at C:\Users\kuo\Desktop\animateGetter\src\ws\indexWS.ts:27:24
+    at Generator.next (<anonymous>)
+    at C:\Users\kuo\Desktop\animateGetter\src\ws\indexWS.ts:8:71
+    at new Promise (<anonymous>)
+1675949772785 : TypeError: Cannot read properties of undefined (reading 'mp4Url')
+    at Anime1.<anonymous> (C:\Users\kuo\Desktop\animateGetter\src\services\anime1.ts:103:43)
+    at Generator.next (<anonymous>)
+    at C:\Users\kuo\Desktop\animateGetter\src\services\anime1.ts:8:71
+    at new Promise (<anonymous>)
+    at C:\Users\kuo\Desktop\animateGetter\src\services\anime1.ts:4:12
+    at Anime1.download (C:\Users\kuo\Desktop\animateGetter\src\services\anime1.ts:100:16)
+    at C:\Users\kuo\Desktop\animateGetter\src\ws\indexWS.ts:28:18
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\kuo\Desktop\animateGetter\src\ws\indexWS.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+1675949810397 : TypeError: Cannot read properties of undefined (reading '0')
+    at Anime1.<anonymous> (C:\Users\kuo\Desktop\animateGetter\src\services\anime1.ts:68:64)
+    at Generator.next (<anonymous>)
+    at C:\Users\kuo\Desktop\animateGetter\src\services\anime1.ts:8:71
+    at new Promise (<anonymous>)
+    at C:\Users\kuo\Desktop\animateGetter\src\services\anime1.ts:4:12
+    at Anime1.preDownload (C:\Users\kuo\Desktop\animateGetter\src\services\anime1.ts:65:16)
+    at C:\Users\kuo\Desktop\animateGetter\src\ws\indexWS.ts:27:24
+    at Generator.next (<anonymous>)
+    at C:\Users\kuo\Desktop\animateGetter\src\ws\indexWS.ts:8:71
+    at new Promise (<anonymous>)
+1675949810399 : TypeError: Cannot read properties of undefined (reading 'mp4Url')
+    at Anime1.<anonymous> (C:\Users\kuo\Desktop\animateGetter\src\services\anime1.ts:103:43)
+    at Generator.next (<anonymous>)
+    at C:\Users\kuo\Desktop\animateGetter\src\services\anime1.ts:8:71
+    at new Promise (<anonymous>)
+    at C:\Users\kuo\Desktop\animateGetter\src\services\anime1.ts:4:12
+    at Anime1.download (C:\Users\kuo\Desktop\animateGetter\src\services\anime1.ts:100:16)
+    at C:\Users\kuo\Desktop\animateGetter\src\ws\indexWS.ts:28:18
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\kuo\Desktop\animateGetter\src\ws\indexWS.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+1675950230034 : Error: 沒有可下載的影片...
+    at Anime1.<anonymous> (C:\Users\kuo\Desktop\animateGetter\src\services\anime1.ts:51:35)
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\kuo\Desktop\animateGetter\src\services\anime1.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+1675950275197 : Error: 沒有可下載的影片...
+    at Anime1.<anonymous> (C:\Users\kuo\Desktop\animateGetter\src\services\anime1.ts:51:35)
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\kuo\Desktop\animateGetter\src\services\anime1.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+1675950385300 : Error: 沒有可下載的影片...
+    at Anime1.<anonymous> (C:\Users\kuo\Desktop\animateGetter\src\services\anime1.ts:51:35)
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\kuo\Desktop\animateGetter\src\services\anime1.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+1675950592254 : Error: 沒有可下載的影片...
+    at Anime1.<anonymous> (C:\Users\kuo\Desktop\animateGetter\src\services\anime1.ts:99:35)
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\kuo\Desktop\animateGetter\src\services\anime1.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+1675950592256 : TypeError: Cannot read properties of undefined (reading 'mp4Url')
+    at Anime1.<anonymous> (C:\Users\kuo\Desktop\animateGetter\src\services\anime1.ts:110:43)
+    at Generator.next (<anonymous>)
+    at C:\Users\kuo\Desktop\animateGetter\src\services\anime1.ts:8:71
+    at new Promise (<anonymous>)
+    at C:\Users\kuo\Desktop\animateGetter\src\services\anime1.ts:4:12
+    at Anime1.download (C:\Users\kuo\Desktop\animateGetter\src\services\anime1.ts:107:16)
+    at C:\Users\kuo\Desktop\animateGetter\src\ws\indexWS.ts:28:18
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\kuo\Desktop\animateGetter\src\ws\indexWS.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+1675951386633 : Error: 沒有可下載的影片...
+    at Anime1.<anonymous> (C:\Users\kuo\Desktop\animateGetter\src\services\anime1.ts:100:35)
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\kuo\Desktop\animateGetter\src\services\anime1.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+1675951386635 : TypeError: Cannot read properties of undefined (reading 'mp4Url')
+    at Anime1.<anonymous> (C:\Users\kuo\Desktop\animateGetter\src\services\anime1.ts:111:43)
+    at Generator.next (<anonymous>)
+    at C:\Users\kuo\Desktop\animateGetter\src\services\anime1.ts:8:71
+    at new Promise (<anonymous>)
+    at C:\Users\kuo\Desktop\animateGetter\src\services\anime1.ts:4:12
+    at Anime1.download (C:\Users\kuo\Desktop\animateGetter\src\services\anime1.ts:108:16)
+    at C:\Users\kuo\Desktop\animateGetter\src\ws\indexWS.ts:28:18
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\kuo\Desktop\animateGetter\src\ws\indexWS.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+1675954797532 : TypeError [ERR_INVALID_STATE]: Invalid state: ReadableStream is locked
+    at new NodeError (node:internal/errors:399:5)
+    at setupReadableStreamDefaultReader (node:internal/webstreams/readablestream:2157:11)
+    at new ReadableStreamDefaultReader (node:internal/webstreams/readablestream:823:5)
+    at ReadableStream.getReader (node:internal/webstreams/readablestream:348:14)
+    at Object.newStreamReadableFromReadableStream (node:internal/webstreams/adapters:500:33)
+    at Function.Readable.fromWeb (node:internal/streams/readable:1403:27)
+    at C:\Users\kuo\Desktop\animateGetter\src\services\utils.ts:11:27
+    at Generator.next (<anonymous>)
+    at C:\Users\kuo\Desktop\animateGetter\src\services\utils.ts:8:71
+    at new Promise (<anonymous>)
+1675954872083 : Error: 沒有可下載的影片...
+    at Myself.<anonymous> (C:\Users\kuo\Desktop\animateGetter\src\services\myself.ts:131:35)
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\kuo\Desktop\animateGetter\src\services\myself.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+1675954959057 : TypeError [ERR_INVALID_STATE]: Invalid state: ReadableStream is locked
+    at new NodeError (node:internal/errors:399:5)
+    at setupReadableStreamDefaultReader (node:internal/webstreams/readablestream:2157:11)
+    at new ReadableStreamDefaultReader (node:internal/webstreams/readablestream:823:5)
+    at ReadableStream.getReader (node:internal/webstreams/readablestream:348:14)
+    at Object.newStreamReadableFromReadableStream (node:internal/webstreams/adapters:500:33)
+    at Function.Readable.fromWeb (node:internal/streams/readable:1403:27)
+    at C:\Users\kuo\Desktop\animateGetter\src\services\utils.ts:11:27
+    at Generator.next (<anonymous>)
+    at C:\Users\kuo\Desktop\animateGetter\src\services\utils.ts:8:71
+    at new Promise (<anonymous>)
+1675955071709 : TypeError [ERR_INVALID_STATE]: Invalid state: ReadableStream is locked
+    at new NodeError (node:internal/errors:399:5)
+    at setupReadableStreamDefaultReader (node:internal/webstreams/readablestream:2157:11)
+    at new ReadableStreamDefaultReader (node:internal/webstreams/readablestream:823:5)
+    at ReadableStream.getReader (node:internal/webstreams/readablestream:348:14)
+    at Object.newStreamReadableFromReadableStream (node:internal/webstreams/adapters:500:33)
+    at Function.Readable.fromWeb (node:internal/streams/readable:1403:27)
+    at C:\Users\kuo\Desktop\animateGetter\src\services\utils.ts:11:27
+    at Generator.next (<anonymous>)
+    at C:\Users\kuo\Desktop\animateGetter\src\services\utils.ts:8:71
+    at new Promise (<anonymous>)
+1675955228799 : Error: 沒有可下載的影片...
+    at Myself.<anonymous> (C:\Users\kuo\Desktop\animateGetter\src\services\myself.ts:131:35)
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\kuo\Desktop\animateGetter\src\services\myself.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+1675955245876 : TypeError: Body is unusable
+    at specConsumeBody (node:internal/deps/undici/undici:6372:15)
+    at Response.text (node:internal/deps/undici/undici:6272:18)
+    at C:\Users\kuo\Desktop\animateGetter\src\services\myself.ts:209:40
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\kuo\Desktop\animateGetter\src\services\myself.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+1675955469786 : Error: 沒有可下載的影片...
+    at Myself.<anonymous> (C:\Users\kuo\Desktop\animateGetter\src\services\myself.ts:131:35)
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\kuo\Desktop\animateGetter\src\services\myself.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+1676040378242 : Error: Status code: 410
+    at ClientRequest.<anonymous> (C:\Users\kuo\Desktop\animateGetter\node_modules\miniget\src\index.ts:255:19)
+    at Object.onceWrapper (node:events:628:26)
+    at ClientRequest.emit (node:events:513:28)
+    at ClientRequest.emit (node:domain:489:12)
+    at HTTPParser.parserOnIncomingClient (node:_http_client:701:27)
+    at HTTPParser.parserOnHeadersComplete (node:_http_common:119:17)
+    at TLSSocket.socketOnData (node:_http_client:542:22)
+    at TLSSocket.emit (node:events:513:28)
+    at TLSSocket.emit (node:domain:489:12)
+    at addChunk (node:internal/streams/readable:324:12)
+1676047909587 : Error: ENOENT: no such file or directory, mkdir 'animate\《閃電霹靂車》#1 (繁中字幕 | 日語原聲)【Ani-One】'
+    at mkdirSync (node:fs:1395:3)
+    at Youtube.<anonymous> (C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:118:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:8:71
+    at new Promise (<anonymous>)
+    at C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:4:12
+    at Youtube.preDownload (C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:98:16)
+    at C:\Users\kuo\Desktop\animateGetter\src\ws\indexWS.ts:28:24
+    at Generator.next (<anonymous>)
+    at C:\Users\kuo\Desktop\animateGetter\src\ws\indexWS.ts:8:71
+1676084458208 : Error: Status code: 410
+    at ClientRequest.<anonymous> (C:\Users\kuo\Desktop\animateGetter\node_modules\miniget\src\index.ts:255:19)
+    at Object.onceWrapper (node:events:628:26)
+    at ClientRequest.emit (node:events:513:28)
+    at ClientRequest.emit (node:domain:489:12)
+    at HTTPParser.parserOnIncomingClient (node:_http_client:701:27)
+    at HTTPParser.parserOnHeadersComplete (node:_http_common:119:17)
+    at TLSSocket.socketOnData (node:_http_client:542:22)
+    at TLSSocket.emit (node:events:513:28)
+    at TLSSocket.emit (node:domain:489:12)
+    at addChunk (node:internal/streams/readable:324:12)
+1676084486952 : Error: Status code: 410
+    at ClientRequest.<anonymous> (C:\Users\kuo\Desktop\animateGetter\node_modules\miniget\src\index.ts:255:19)
+    at Object.onceWrapper (node:events:628:26)
+    at ClientRequest.emit (node:events:513:28)
+    at ClientRequest.emit (node:domain:489:12)
+    at HTTPParser.parserOnIncomingClient (node:_http_client:701:27)
+    at HTTPParser.parserOnHeadersComplete (node:_http_common:119:17)
+    at TLSSocket.socketOnData (node:_http_client:542:22)
+    at TLSSocket.emit (node:events:513:28)
+    at TLSSocket.emit (node:domain:489:12)
+    at addChunk (node:internal/streams/readable:324:12)
+1676085324759 : Error: Status code: 410
+    at ClientRequest.<anonymous> (C:\Users\kuo\Desktop\animateGetter\node_modules\miniget\src\index.ts:255:19)
+    at Object.onceWrapper (node:events:628:26)
+    at ClientRequest.emit (node:events:513:28)
+    at ClientRequest.emit (node:domain:489:12)
+    at HTTPParser.parserOnIncomingClient (node:_http_client:701:27)
+    at HTTPParser.parserOnHeadersComplete (node:_http_common:119:17)
+    at TLSSocket.socketOnData (node:_http_client:542:22)
+    at TLSSocket.emit (node:events:513:28)
+    at TLSSocket.emit (node:domain:489:12)
+    at addChunk (node:internal/streams/readable:324:12)
+1676085503784 : Error: Status code: 410
+    at ClientRequest.<anonymous> (C:\Users\kuo\Desktop\animateGetter\node_modules\miniget\src\index.ts:255:19)
+    at Object.onceWrapper (node:events:628:26)
+    at ClientRequest.emit (node:events:513:28)
+    at ClientRequest.emit (node:domain:489:12)
+    at HTTPParser.parserOnIncomingClient (node:_http_client:701:27)
+    at HTTPParser.parserOnHeadersComplete (node:_http_common:119:17)
+    at TLSSocket.socketOnData (node:_http_client:542:22)
+    at TLSSocket.emit (node:events:513:28)
+    at TLSSocket.emit (node:domain:489:12)
+    at addChunk (node:internal/streams/readable:324:12)
+1676085575008 : Error: Status code: 410
+    at ClientRequest.<anonymous> (C:\Users\kuo\Desktop\animateGetter\node_modules\miniget\src\index.ts:255:19)
+    at Object.onceWrapper (node:events:628:26)
+    at ClientRequest.emit (node:events:513:28)
+    at ClientRequest.emit (node:domain:489:12)
+    at HTTPParser.parserOnIncomingClient (node:_http_client:701:27)
+    at HTTPParser.parserOnHeadersComplete (node:_http_common:119:17)
+    at TLSSocket.socketOnData (node:_http_client:542:22)
+    at TLSSocket.emit (node:events:513:28)
+    at TLSSocket.emit (node:domain:489:12)
+    at addChunk (node:internal/streams/readable:324:12)
+1676091128790 : Error: Evaluation failed: TypeError: Cannot read properties of null (reading 'replace')
+    at pptr://__puppeteer_evaluation_script__:1:59
+    at Array.map (<anonymous>)
+    at pptr://__puppeteer_evaluation_script__:1:21
+    at ExecutionContext._ExecutionContext_evaluate (C:\Users\kuo\Desktop\animateGetter\node_modules\puppeteer-core\src\common\ExecutionContext.ts:310:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (C:\Users\kuo\Desktop\animateGetter\node_modules\puppeteer-core\src\common\ExecutionContext.ts:153:12)
+    at async JSHandle.evaluate (C:\Users\kuo\Desktop\animateGetter\node_modules\puppeteer-core\src\common\JSHandle.ts:133:12)
+    at async Promise.all (index 0)
+    at async ElementHandle.$$eval (C:\Users\kuo\Desktop\animateGetter\node_modules\puppeteer-core\src\common\ElementHandle.ts:260:22)
+1676126146918 : TypeError: Cannot read properties of undefined (reading 'playerCaptionsTracklistRenderer')
+    at Youtube.<anonymous> (C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:186:64)
+    at Generator.next (<anonymous>)
+    at C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:8:71
+    at new Promise (<anonymous>)
+    at C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:4:12
+    at Youtube.downloadYTSub (C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:181:16)
+    at Youtube.<anonymous> (C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:142:28)
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+1676213636689 : Error: ffmpeg exited with code 3221226356: 
+    at ChildProcess.<anonymous> (C:\Users\kuo\Desktop\animateGetter\node_modules\fluent-ffmpeg\lib\processor.js:182:22)
+    at ChildProcess.emit (node:events:513:28)
+    at ChildProcess.emit (node:domain:489:12)
+    at Process.onexit (node:internal/child_process:291:12)
+    at Process.callbackTrampoline (node:internal/async_hooks:130:17)
+1676214098408 : Error: ffmpeg exited with code 3221225477: frame=    0 fps=0.0 q=0.0 size=       0kB time=-577014:32:22.77 bitrate=  -0.0kbits/s speed=N/A    
+frame=   88 fps=0.0 q=28.0 size=     512kB time=00:00:05.92 bitrate= 708.4kbits/s speed=11.4x    
+frame=  249 fps=243 q=28.0 size=    1280kB time=00:00:12.79 bitrate= 819.6kbits/s speed=12.5x    
+frame=  418 fps=272 q=28.0 size=    1536kB time=00:00:19.73 bitrate= 637.5kbits/s speed=12.9x    
+frame=  562 fps=276 q=28.0 size=    2304kB time=00:00:25.77 bitrate= 732.3kbits/s speed=12.7x    
+frame=  696 fps=274 q=28.0 size=    3328kB time=00:00:31.62 bitrate= 862.1kbits/s speed=12.5x    
+frame=  830 fps=273 q=28.0 size=    4096kB time=00:00:37.15 bitrate= 903.2kbits/s speed=12.2x    
+frame=  963 fps=272 q=28.0 size=    5120kB time=00:00:42.60 bitrate= 984.4kbits/s speed=  12x    
+frame= 1112 fps=275 q=28.0 size=    5888kB time=00:00:48.73 bitrate= 989.7kbits/s speed=  12x    
+frame= 1243 fps=273 q=28.0 size=    6656kB time=00:00:54.10 bitrate=1007.8kbits/s speed=11.9x    
+frame= 1348 fps=266 q=28.0 size=    7680kB time=00:00:58.74 bitrate=1071.0kbits/s speed=11.6x    
+frame= 1482 fps=266 q=28.0 size=    8448kB time=00:01:04.20 bitrate=1077.9kbits/s speed=11.5x    
+frame= 1667 fps=275 q=28.0 size=    9216kB time=00:01:11.98 bitrate=1048.8kbits/s speed=11.9x    
+frame= 1816 fps=277 q=28.0 size=    9984kB time=00:01:18.32 bitrate=1044.3kbits/s speed=11.9x    
+frame= 1966 fps=278 q=28.0 size=   10752kB time=00:01:24.40 bitrate=1043.6kbits/s speed=11.9x    
+frame= 2097 fps=277 q=28.0 size=   11520kB time=00:01:29.86 bitrate=1050.2kbits/s speed=11.9x    
+frame= 2208 fps=273 q=28.0 size=   12544kB time=00:01:34.50 bitrate=1087.4kbits/s speed=11.7x    
+frame= 2329 fps=271 q=28.0 size=   13568kB time=00:01:39.49 bitrate=1117.1kbits/s speed=11.6x    
+frame= 2460 fps=270 q=28.0 size=   14336kB time=00:01:45.07 bitrate=1117.7kbits/s speed=11.5x    
+frame= 2610 fps=272 q=28.0 size=   15104kB time=00:01:51.45 bitrate=1110.1kbits/s speed=11.6x    
+frame= 2751 fps=272 q=28.0 size=   15872kB time=00:01:57.40 bitrate=1107.5kbits/s speed=11.6x    
+frame= 2890 fps=272 q=28.0 size=   16640kB time=00:02:02.94 bitrate=1108.7kbits/s speed=11.6x    
+frame= 3024 fps=272 q=28.0 size=   17408kB time=00:02:08.40 bitrate=1110.6kbits/s speed=11.6x    
+frame= 3187 fps=275 q=28.0 size=   18432kB time=00:02:15.32 bitrate=1115.8kbits/s speed=11.7x    
+frame= 3351 fps=277 q=28.0 size=   18944kB time=00:02:22.22 bitrate=1091.2kbits/s speed=11.7x    
+frame= 3488 fps=277 q=28.0 size=   19456kB time=00:02:27.70 bitrate=1079.1kbits/s speed=11.7x    
+frame= 3597 fps=274 q=28.0 size=   20480kB time=00:02:32.32 bitrate=1101.4kbits/s speed=11.6x    
+frame= 3719 fps=273 q=28.0 size=   21504kB time=00:02:37.57 bitrate=1118.0kbits/s speed=11.6x    
+frame= 3856 fps=273 q=28.0 size=   22272kB time=00:02:43.32 bitrate=1117.1kbits/s speed=11.6x    
+frame= 3967 fps=271 q=28.0 size=   23552kB time=00:02:47.88 bitrate=1149.3kbits/s speed=11.5x    
+frame= 4097 fps=270 q=28.0 size=   24832kB time=00:02:53.40 bitrate=1173.1kbits/s speed=11.4x    
+frame= 4236 fps=271 q=28.0 size=   25600kB time=00:02:58.95 bitrate=1171.9kbits/s speed=11.4x    
+frame= 4368 fps=270 q=28.0 size=   26112kB time=00:03:04.64 bitrate=1158.5kbits/s speed=11.4x    
+frame= 4474 fps=269 q=28.0 size=   27136kB time=00:03:09.01 bitrate=1176.1kbits/s speed=11.3x    
+frame= 4579 fps=267 q=28.0 size=   28416kB time=00:03:13.56 bitrate=1202.6kbits/s speed=11.3x    
+frame= 4698 fps=266 q=28.0 size=   29184kB time=00:03:18.34 bitrate=1205.4kbits/s speed=11.2x    
+frame= 4841 fps=266 q=28.0 size=   30208kB time=00:03:24.12 bitrate=1212.3kbits/s speed=11.2x    
+frame= 5028 fps=269 q=28.0 size=   30720kB time=00:03:31.95 bitrate=1187.3kbits/s speed=11.3x    
+frame= 5203 fps=271 q=28.0 size=   31488kB time=00:03:39.31 bitrate=1176.2kbits/s speed=11.4x    
+frame= 5358 fps=272 q=28.0 size=   32256kB time=00:03:46.09 bitrate=1168.7kbits/s speed=11.5x    
+frame= 5587 fps=277 q=28.0 size=   32768kB time=00:03:55.33 bitrate=1140.7kbits/s speed=11.6x    
+frame= 5798 fps=280 q=28.0 size=   33280kB time=00:04:04.48 bitrate=1115.1kbits/s speed=11.8x    
+frame= 5967 fps=281 q=28.0 size=   34048kB time=00:04:11.35 bitrate=1109.7kbits/s speed=11.8x    
+frame= 6117 fps=282 q=28.0 size=   34816kB time=00:04:17.60 bitrate=1107.2kbits/s speed=11.9x    
+frame= 6238 fps=281 q=28.0 size=   35584kB time=00:04:22.64 bitrate=1109.9kbits/s speed=11.8x    
+frame= 6409 fps=282 q=28.0 size=   36352kB time=00:04:29.69 bitrate=1104.2kbits/s speed=11.9x    
+frame= 6609 fps=284 q=28.0 size=   37120kB time=00:04:38.01 bitrate=1093.8kbits/s speed=  12x    
+frame= 6764 fps=285 q=28.0 size=   37888kB time=00:04:44.44 bitrate=1091.2kbits/s speed=  12x    
+frame= 6904 fps=285 q=28.0 size=   38656kB time=00:04:50.36 bitrate=1090.6kbits/s speed=  12x    
+frame= 7073 fps=286 q=28.0 size=   39424kB time=00:04:57.26 bitrate=1086.5kbits/s speed=  12x    
+frame= 7244 fps=287 q=28.0 size=   40192kB time=00:05:04.64 bitrate=1080.8kbits/s speed=12.1x    
+frame= 7409 fps=288 q=28.0 size=   40704kB time=00:05:11.49 bitrate=1070.5kbits/s speed=12.1x    
+frame= 7557 fps=287 q=28.0 size=   41472kB time=00:05:17.41 bitrate=1070.3kbits/s speed=12.1x    
+frame= 7689 fps=287 q=28.0 size=   42240kB time=00:05:22.98 bitrate=1071.3kbits/s speed=12.1x    
+frame= 7857 fps=288 q=28.0 size=   43008kB time=00:05:30.30 bitrate=1066.7kbits/s speed=12.1x    
+frame= 8031 fps=289 q=28.0 size=   43776kB time=00:05:37.52 bitrate=1062.5kbits/s speed=12.1x    
+frame= 8174 fps=289 q=28.0 size=   44544kB time=00:05:43.39 bitrate=1062.6kbits/s speed=12.1x    
+
+    at ChildProcess.<anonymous> (C:\Users\kuo\Desktop\animateGetter\node_modules\fluent-ffmpeg\lib\processor.js:182:22)
+    at ChildProcess.emit (node:events:513:28)
+    at ChildProcess.emit (node:domain:489:12)
+    at Process.onexit (node:internal/child_process:291:12)
+    at Process.callbackTrampoline (node:internal/async_hooks:130:17)
+1676240891277 : Error: ffmpeg exited with code 1: https://rr2---sn-ipoxu-un5ee.googlevideo.com/videoplayback?expire=1676240806&ei=RhPpY5mvJPKus8IP_MKRyAY&ip=114.34.188.110&id=o-AIUyUWxIsOr3ZFw62JI4clwFJsDQuqxpjtnnkwtpjOV1&itag=22&source=youtube&requiressl=yes&mh=Iq&mm=31%2C29&mn=sn-ipoxu-un5ee%2Csn-un57ene6&ms=au%2Crdu&mv=m&mvi=2&pcm2cms=yes&pl=24&gcr=tw&initcwndbps=827500&vprv=1&mime=video%2Fmp4&ns=EY_p-XwxG_IERcf1diBWx0gL&cnr=14&ratebypass=yes&dur=1465.109&lmt=1582585298512502&mt=1676218875&fvip=5&fexp=24007246&c=WEB&txp=5432432&n=fcWvczuYjKgrvg&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cgcr%2Cvprv%2Cmime%2Cns%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRAIgYxPwH2ID3La-KD3QVFWx0-MLz2jhgpA0_IPLi_rqm3wCIB5nzaIemmGx8-rqlS-3dLnSCIYgCxpx6LF90Cl3lHyC&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpcm2cms%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRQIgCBlmsC1uUcdFmS30-TdxxE_lF-Ye3RcmKxaoh6KCh0wCIQCPzsfRmyWCkUY0xVF0tqh4pbQcA6rkrGgp61B11UYqmA%3D%3D: Server returned 403 Forbidden (access denied)
+
+    at ChildProcess.<anonymous> (C:\Users\kuo\Desktop\animateGetter\node_modules\fluent-ffmpeg\lib\processor.js:182:22)
+    at ChildProcess.emit (node:events:513:28)
+    at ChildProcess.emit (node:domain:489:12)
+    at Process.onexit (node:internal/child_process:291:12)
+    at Process.callbackTrampoline (node:internal/async_hooks:130:17)
+1676288594085 : Error: ffmpeg exited with code 1: https://rr4---sn-ipoxu-un5ee.googlevideo.com/videoplayback?expire=1676288447&ei=X83pY6exNZWEgQOux4QI&ip=114.34.188.110&id=o-ABZr1U6u6ka8Jbk2Hj96DP6vOcDq4OtpYrqo4ojIclOl&itag=22&source=youtube&requiressl=yes&mh=6i&mm=31%2C29&mn=sn-ipoxu-un5ee%2Csn-un57sn7y&ms=au%2Crdu&mv=m&mvi=4&pcm2cms=yes&pl=24&gcr=tw&initcwndbps=800000&vprv=1&mime=video%2Fmp4&ns=RnHJoiYk3TKbU3kPEBbMOLAL&cnr=14&ratebypass=yes&dur=1431.951&lmt=1586882469189934&mt=1676266391&fvip=2&fexp=24007246&c=WEB&txp=5432432&n=l6lvFUk_-Jqytg&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cgcr%2Cvprv%2Cmime%2Cns%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRQIhAKOcrI9rgru0lKZVAhFAlQ4Q2ZSyT3nme0BvzPsjCHthAiBucHP-eE2RGvJhnQDRnteSZO74YftH2FREXwPCKv6Nlw%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpcm2cms%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRQIgNzc2qGCoWeLLZNVaZHfGwX0Zl7eIo967edxPpDSmGr4CIQC00XKsNizdgolq3DB7s45cEDfVbkCvfr_3nNMKsrdL3w%3D%3D: Server returned 403 Forbidden (access denied)
+
+    at ChildProcess.<anonymous> (C:\Users\kuo\Desktop\animateGetter\node_modules\fluent-ffmpeg\lib\processor.js:182:22)
+    at ChildProcess.emit (node:events:513:28)
+    at ChildProcess.emit (node:domain:489:12)
+    at Process.onexit (node:internal/child_process:291:12)
+    at Process.callbackTrampoline (node:internal/async_hooks:130:17)
+1676880705439 : Error: Not a YouTube domain
+    at Object.getURLVideoID (C:\Users\kuo\Desktop\animateGetter\node_modules\ytdl-core\lib\url-utils.js:33:11)
+    at Object.getVideoID (C:\Users\kuo\Desktop\animateGetter\node_modules\ytdl-core\lib\url-utils.js:61:20)
+    at C:\Users\kuo\Desktop\animateGetter\node_modules\ytdl-core\lib\info.js:484:29
+    at Youtube.<anonymous> (C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:36:41)
+    at Generator.next (<anonymous>)
+    at C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:8:71
+    at new Promise (<anonymous>)
+    at C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:4:12
+    at Youtube.getChList (C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:39:16)
+    at Youtube.<anonymous> (C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:225:20)
+1676880705441 : Error: 沒有可下載的影片...
+    at Youtube.<anonymous> (C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:107:35)
+    at Generator.next (<anonymous>)
+    at C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:8:71
+    at new Promise (<anonymous>)
+    at C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:4:12
+    at Youtube.preDownload (C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:79:16)
+    at Youtube.<anonymous> (C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:228:20)
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+1676881493029 : TypeError: chData.m3u8Url.slice(...).join is not a function
+    at C:\Users\kuo\Desktop\animateGetter\src\services\myself.ts:199:53
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\kuo\Desktop\animateGetter\src\services\myself.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+1676946952843 : Error: Not a YouTube domain
+    at Object.getURLVideoID (C:\Users\kuo\Desktop\animateGetter\node_modules\ytdl-core\lib\url-utils.js:33:11)
+    at Object.getVideoID (C:\Users\kuo\Desktop\animateGetter\node_modules\ytdl-core\lib\url-utils.js:61:20)
+    at C:\Users\kuo\Desktop\animateGetter\node_modules\ytdl-core\lib\info.js:484:29
+    at Youtube.<anonymous> (C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:36:41)
+    at Generator.next (<anonymous>)
+    at C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:8:71
+    at new Promise (<anonymous>)
+    at C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:4:12
+    at Youtube.getChList (C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:39:16)
+    at Youtube.<anonymous> (C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:225:20)
+1676946952845 : Error: 沒有可下載的影片...
+    at Youtube.<anonymous> (C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:107:35)
+    at Generator.next (<anonymous>)
+    at C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:8:71
+    at new Promise (<anonymous>)
+    at C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:4:12
+    at Youtube.preDownload (C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:79:16)
+    at Youtube.<anonymous> (C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:228:20)
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+1676948881799 : Error: Not a YouTube domain
+    at Object.getURLVideoID (C:\Users\kuo\Desktop\animateGetter\node_modules\ytdl-core\lib\url-utils.js:33:11)
+    at Object.getVideoID (C:\Users\kuo\Desktop\animateGetter\node_modules\ytdl-core\lib\url-utils.js:61:20)
+    at C:\Users\kuo\Desktop\animateGetter\node_modules\ytdl-core\lib\info.js:484:29
+    at Youtube.<anonymous> (C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:36:41)
+    at Generator.next (<anonymous>)
+    at C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:8:71
+    at new Promise (<anonymous>)
+    at C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:4:12
+    at Youtube.getChList (C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:39:16)
+    at Youtube.<anonymous> (C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:225:20)
+1676948881802 : Error: 沒有可下載的影片...
+    at Youtube.<anonymous> (C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:107:35)
+    at Generator.next (<anonymous>)
+    at C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:8:71
+    at new Promise (<anonymous>)
+    at C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:4:12
+    at Youtube.preDownload (C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:79:16)
+    at Youtube.<anonymous> (C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:228:20)
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+1676996325239 : Error: ENOENT: no such file or directory, open 'V:\福音戰士新劇場版：終\cover.jpg'
+1676996345232 : Error: Protocol error (Page.reload): Session closed. Most likely the page has been closed.
+    at CDPSessionImpl.send (C:\Users\kuo\Desktop\animateGetter\node_modules\puppeteer-core\src\common\Connection.ts:379:9)
+    at CDPPage.reload (C:\Users\kuo\Desktop\animateGetter\node_modules\puppeteer-core\src\common\Page.ts:916:20)
+    at Myself.<anonymous> (C:\Users\kuo\Desktop\animateGetter\src\services\myself.ts:118:39)
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\kuo\Desktop\animateGetter\src\services\myself.ts:5:58)
+1676996345234 : TypeError: Failed to parse URL from undefined
+    at Object.fetch (node:internal/deps/undici/undici:14152:11)
+1676996392386 : Error: 沒有可下載的影片...
+    at Myself.<anonymous> (C:\Users\kuo\Desktop\animateGetter\src\services\myself.ts:97:35)
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\kuo\Desktop\animateGetter\src\services\myself.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+1677042673760 : TypeError: fetch failed
+    at Object.fetch (node:internal/deps/undici/undici:14152:11)
+1677044997432 : Error: 878
+    at Myself.<anonymous> (C:\Users\kuo\Desktop\animateGetter\src\services\myself.ts:133:19)
+    at Generator.next (<anonymous>)
+    at C:\Users\kuo\Desktop\animateGetter\src\services\myself.ts:8:71
+    at new Promise (<anonymous>)
+    at C:\Users\kuo\Desktop\animateGetter\src\services\myself.ts:4:12
+    at Myself.download (C:\Users\kuo\Desktop\animateGetter\src\services\myself.ts:132:16)
+    at Myself.<anonymous> (C:\Users\kuo\Desktop\animateGetter\src\services\myself.ts:147:20)
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\kuo\Desktop\animateGetter\src\services\myself.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+1677045318709 : TypeError: Failed to parse URL from chData.m3u8Url
+    at Object.fetch (node:internal/deps/undici/undici:14152:11)
+1677045518823 : TypeError: Failed to parse URL from chData.m3u8Url
+    at Object.fetch (node:internal/deps/undici/undici:14152:11)
+From previous Error
+    at Myself.<anonymous> (C:\Users\kuo\Desktop\animateGetter\src\services\myself.ts:171:27)
+
+1677045595718 : TypeError: Failed to parse URL from chData.m3u8Url
+    at Object.fetch (node:internal/deps/undici/undici:14152:11)
+1677045761019 : TypeError: Failed to parse URL from chData.m3u8Url
+    at Object.fetch (node:internal/deps/undici/undici:14152:11)
+1677045888231 : TypeError: Failed to parse URL from chData.m3u8Url
+    at Object.fetch (node:internal/deps/undici/undici:14152:11)Error
+    at Myself.<anonymous> (C:\Users\kuo\Desktop\animateGetter\src\services\myself.ts:171:26)
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\kuo\Desktop\animateGetter\src\services\myself.ts:6:65)
+1677045991582 : TypeError: Failed to parse URL from chData.m3u8Url
+    at Object.fetch (node:internal/deps/undici/undici:14152:11)Error
+    at Myself.<anonymous> (C:\Users\kuo\Desktop\animateGetter\src\services\myself.ts:171:26)
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\kuo\Desktop\animateGetter\src\services\myself.ts:6:65)
+1677148092034 : Error: ENOENT: no such file or directory, open 'V:\輝夜姬想讓人告白～天才們的戀愛頭腦戰～ 第三季\cover.jpg'
+1677148112054 : Error: Protocol error (Page.reload): Session closed. Most likely the page has been closed.
+    at CDPSessionImpl.send (C:\Users\kuo\Desktop\animateGetter\node_modules\puppeteer-core\src\common\Connection.ts:379:9)
+    at CDPPage.reload (C:\Users\kuo\Desktop\animateGetter\node_modules\puppeteer-core\src\common\Page.ts:916:20)
+    at Myself.<anonymous> (C:\Users\kuo\Desktop\animateGetter\src\services\myself.ts:118:39)
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\kuo\Desktop\animateGetter\src\services\myself.ts:5:58)
+1677148112056 : TypeError: Failed to parse URL from undefined
+    at Object.fetch (node:internal/deps/undici/undici:14152:11)Error
+    at Myself.<anonymous> (C:\Users\kuo\Desktop\animateGetter\src\services\myself.ts:171:26)
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\kuo\Desktop\animateGetter\src\services\myself.ts:6:65)
+1677148180356 : Error: 沒有可下載的影片...
+    at Myself.<anonymous> (C:\Users\kuo\Desktop\animateGetter\src\services\myself.ts:97:35)
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\kuo\Desktop\animateGetter\src\services\myself.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+1677148190644 : Error: Not a YouTube domain
+    at Object.getURLVideoID (C:\Users\kuo\Desktop\animateGetter\node_modules\ytdl-core\lib\url-utils.js:33:11)
+    at Object.getVideoID (C:\Users\kuo\Desktop\animateGetter\node_modules\ytdl-core\lib\url-utils.js:61:20)
+    at C:\Users\kuo\Desktop\animateGetter\node_modules\ytdl-core\lib\info.js:484:29
+    at Youtube.<anonymous> (C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:36:41)
+    at Generator.next (<anonymous>)
+    at C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:8:71
+    at new Promise (<anonymous>)
+    at C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:4:12
+    at Youtube.getChList (C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:39:16)
+    at Youtube.<anonymous> (C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:225:20)
+1677148190648 : Error: 沒有可下載的影片...
+    at Youtube.<anonymous> (C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:107:35)
+    at Generator.next (<anonymous>)
+    at C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:8:71
+    at new Promise (<anonymous>)
+    at C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:4:12
+    at Youtube.preDownload (C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:79:16)
+    at Youtube.<anonymous> (C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:228:20)
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\kuo\Desktop\animateGetter\src\services\youtube.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)

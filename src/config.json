@@ -1,0 +1,21 @@
+{
+    "httpPort": 3000,
+    "rootDir": "V:\\",
+    "ttlMinute": 10,
+    "myself": {},
+    "anime1": {
+        "executablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+        "domainList": [
+            "bocchi",
+            "nazuna",
+            "chima",
+            "muan"
+        ]
+    },
+    "yotube": {
+        "cookie": "",
+        "sbuLang": [
+            "zh-Hant"
+        ]
+    }
+}

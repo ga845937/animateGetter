@@ -1,0 +1,47 @@
+<script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/animateGetterPublic/index.js"></script>
+
+<div class="container">
+    <div class="row">
+        <div class="col-2">
+            <select class="form-select" id="animateWeb">
+                <option value="youtube">youtube</option>
+                <option value="anime1">anime1</option>
+                <option value="myself">myself</option>
+            </select>
+        </div>
+        <div class="col-sm">
+            <div class="input-group mb-3">
+                <div class="form-floating">
+                    <input type="text" class="form-control" placeholder="網址" id="animateUrl"
+                        value="https://www.youtube.com/watch?v=BplyEOPbi6I&list=PLOUgNR40m0HL69FLhK4U11PD7MHNVllLy&index=1">
+                    <!-- https://myself-bbs.com/thread-49082-1-1.html -->
+                    <!-- https://anime1.me/19483 -->
+                    <!-- https://anime1.me/category/2022%e5%b9%b4%e7%a7%8b%e5%ad%a3/%e6%88%91%e6%83%b3%e6%88%90%e7%82%ba%e5%bd%b1%e4%b9%8b%e5%bc%b7%e8%80%85 -->
+                    <!-- https://www.youtube.com/watch?v=BplyEOPbi6I&list=PLOUgNR40m0HL69FLhK4U11PD7MHNVllLy&index=1 -->
+                    <!-- https://www.youtube.com/watch?v=BplyEOPbi6I -->
+                    <!-- https://www.youtube.com/watch?v=R9pAIkG08kI -->
+                    <label for="floatingInputGroup1">網址</label>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="btn-group btn-group-lg">
+                <button type="button" class="btn btn-primary" onclick="send()">送出</button>
+            </div>
+            <div class="btn-group btn-group-lg">
+                <button type="button" class="btn btn-danger" onclick="download()">下載(偽)</button>
+            </div>
+            <div class="btn-group btn-group-lg">
+                <button type="button" class="btn btn-danger" onclick="batchWork()">批次</button>
+            </div>
+            <div class="btn-group btn-group-lg">
+                <button type="button" class="btn btn-info">設定</button>
+            </div>
+        </div>
+    </div>
+</div>
