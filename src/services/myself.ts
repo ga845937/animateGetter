@@ -50,7 +50,7 @@ export class Myself {
             const bname = await myself.page.title();
             myself.bname = bname.split("【")[0].replace(/([<>:"/\\|?*])/g, "");
             const chListDom = await myself.page.$$eval("ul.main_list a", anchors => anchors.map(y => [y.innerHTML.replace(/([<>:"/\\|?*])/g, "")]));
-            myself.chList = chListDom.filter(x => x[0] !== "站內") as any;
+            myself.chList = chListDom.filter(x => x[0] !== "站內" && x[0] !== "先鋒") as any;
             myself.coverUrl = await myself.page.$eval(".info_img_box > img", img => img.src);
 
             const chListRes = {
@@ -87,6 +87,7 @@ export class Myself {
                 myself.chData.push(chDataJSON);
             }
 
+            await mkdirSync(join(config.rootDir, myself.bname), { recursive: true });
             const coverRequest = await fetch(myself.coverUrl);
             const coverPath = join(config.rootDir, myself.bname, "cover.jpg");
             await streamDownloadFile(coverPath, coverRequest.body);
