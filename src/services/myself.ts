@@ -32,6 +32,7 @@ export class Myself {
             const myself = this.data;
             myself.browser = await launch({
                 //headless: false,
+                args: ["--no-sandbox"],
                 ignoreHTTPSErrors: true
             });
 

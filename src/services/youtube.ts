@@ -39,6 +39,7 @@ export class Youtube {
             if (youtube.listDownload) {
                 youtube.browser = await launch({
                     //headless: false,
+                    args: ["--no-sandbox"],
                     ignoreHTTPSErrors: true
                 });
 

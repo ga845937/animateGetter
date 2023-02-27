@@ -32,9 +32,7 @@ export class Anime1 {
                 //headless: false,
                 ignoreHTTPSErrors: true,
                 executablePath: config.anime1.executablePath,
-                args: [
-                    "--incognito",
-                ],
+                args: ["--no-sandbox", "--incognito"],
             });
 
             anime1.page = await anime1.browser.newPage();
