@@ -1,10 +1,7 @@
 const websocket = io("/", { path: "/animateGetter" });
 let ttlList = {}
 
-function send() {
-    const animateWeb = $("#animateWeb").val();
-    const animateUrl = $("#animateUrl").val();
-
+function checkUrl(animateWeb, animateUrl) {
     switch (animateWeb) {
         case "myself":
             if (!animateUrl.startsWith("https://myself-bbs.com/")) {
@@ -28,10 +25,20 @@ function send() {
             alert("網站選擇錯誤")
             return false;
     }
+    return true
+}
+
+function send() {
+    const animateWeb = $("#animateWeb").val();
+    const animateUrl = $("#animateUrl").val();
+
+    if (!checkUrl(animateWeb, animateUrl)) {
+        return
+    }
 
     const rtn = {
-        animateWeb: $("#animateWeb").val(),
-        animateUrl: $("#animateUrl").val()
+        animateWeb: animateWeb,
+        animateUrl: animateUrl
     }
 
     websocket.emit('getChList', rtn);
@@ -73,13 +80,34 @@ websocket.on("mergeEnd", function (chData) {
     }
 })
 
-function batchWork() {
+async function readQueue() {
+    websocket.emit('readQueue');
+}
+websocket.on("readQueue", function (listQueue) {
+    console.log(listQueue);
+})
+
+async function batchWork() {
     const rtn = [
         {
             animateWeb: $("#animateWeb").val(),
-            animateUrl: $("#animateUrl").val()
+            animateUrl: $("#animateUrl").val(),
+            memo: "閃電霹靂車",
+            downloadEnd: false
         }
     ]
+
+    let check = true
+    rtn.forEach(ele => {
+        if (!checkUrl(ele.animateWeb, ele.animateUrl)) {
+            check = false
+            return
+        }
+    });
+
+    if (!check) {
+        return
+    }
     /*
     ,
           {
