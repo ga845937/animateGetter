@@ -7,8 +7,6 @@ export type Task = Myself | Anime1 | Youtube;
 export interface IAnimateRequest {
     animateWeb: "myself" | "anime1" | "youtube",
     animateUrl: string,
-    memo?: string,
-    downloadEnd?: boolean
 }
 
 export interface IDownloadRequest {
