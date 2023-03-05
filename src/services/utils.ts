@@ -13,21 +13,23 @@ async function streamDownloadFile(filePath: string, data: ReadableStream<Uint8Ar
 }
 
 async function fetchRetry(url: string, headers?: { [key: string]: any }) {
-    let retry = 1;
     let request;
-    while (!request) {
+    const maxRetry = 4;
+    for (let i = 1; i < maxRetry; i++) {
+        if (i >= maxRetry) {
+            throw new Error(`url: ${url} 重試請求${maxRetry - 1}次 都失敗`);
+        }
         try {
-            if (retry >= 3) {
-                throw new Error(`url: ${url} 重試請求三次 都失敗`);
+            if (request) {
+                break;
             }
-            if (retry !== 1) {
+            if (i !== 1) {
                 await delay();
             }
             request = await fetch(url, { headers: headers });
         }
         catch (err) {
             console.log(err);
-            retry++;
         }
     }
     return request;

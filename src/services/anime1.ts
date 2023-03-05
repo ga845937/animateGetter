@@ -113,7 +113,7 @@ export class Anime1 {
                 const headers = mp4PageRequest.headers();
                 if (Object.keys(headers).includes("cookie")) {
                     if (headers.cookie.includes("; p=")) {
-                        const mp4Request = await fetchRetry(mp4Url, { headers: headers });
+                        const mp4Request = await fetchRetry(mp4Url, headers);
                         await streamDownloadFile(finalName, mp4Request.body);
                         anime1.downloadEndIndx.push(chioceChapterIndex);
                     }
@@ -146,15 +146,22 @@ export class Anime1 {
         }
         catch (err) {
             errorHandle(this, err);
+            throw err;
         }
     }
 
     async batchWork() {
-        const anime1 = this.data;
-        await this.getChList();
-        const chioceChapterIndex = Array.from({ length: anime1.chList.length }, (num, i) => i);
-        this.socket.emit("status", "建立資料夾中...");
-        await this.preDownload(chioceChapterIndex);
-        await this.download();
+        try {
+            const anime1 = this.data;
+            await this.getChList();
+            const chioceChapterIndex = Array.from({ length: anime1.chList.length }, (num, i) => i);
+            this.socket.emit("status", "建立資料夾中...");
+            await this.preDownload(chioceChapterIndex);
+            await this.download();
+        }
+        catch (err) {
+            console.log(err);
+        }
+
     }
 }

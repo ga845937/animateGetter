@@ -216,7 +216,6 @@ export class Youtube {
         }
         catch (err) {
             console.log(err);
-            return;
         }
 
     }

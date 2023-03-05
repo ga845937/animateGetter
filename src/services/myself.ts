@@ -101,6 +101,7 @@ export class Myself {
         }
         catch (err) {
             errorHandle(this, err);
+            throw err;
         }
     }
 
@@ -127,6 +128,7 @@ export class Myself {
         }
         catch (err) {
             errorHandle(this, err);
+            throw err;
         }
     }
 
@@ -172,16 +174,22 @@ export class Myself {
         catch (err) {
             err.stack += new Error().stack;
             errorHandle(this, err);
+			throw err;
         }
     }
 
     async batchWork() {
-        const myself = this.data;
-        await this.getChList();
-        const chioceChapterIndex = Array.from({ length: myself.chList.length }, (num, i) => i);
-        this.socket.emit("status", "建立資料夾中...");
-        await this.preDownload(chioceChapterIndex);
-        await this.download();
+        try {
+            const myself = this.data;
+            await this.getChList();
+            const chioceChapterIndex = Array.from({ length: myself.chList.length }, (num, i) => i);
+            this.socket.emit("status", "建立資料夾中...");
+            await this.preDownload(chioceChapterIndex);
+            await this.download();
+        }
+        catch (err) {
+            console.log(err);
+        }
     }
 }
 
@@ -192,7 +200,7 @@ async function getMyselfTS(getMyselfTSData: IGetMyselfTS) {
             Referer: "https://v.myself-bbs.com/",
             origin: "https://v.myself-bbs.com/",
         };
-        const m3u8Request = await fetchRetry(chData.m3u8Url, { headers: headers });
+        const m3u8Request = await fetchRetry(chData.m3u8Url, headers);
         const m3u8BaseUrl = chData.m3u8Url.split("/").slice(0, -1).join("/");
         const m3u8Text = await m3u8Request.text();
         const m3u8Path = join(chData.tsPath, "index.m3u8");
@@ -205,14 +213,14 @@ async function getMyselfTS(getMyselfTSData: IGetMyselfTS) {
             const name = tsN.split("/").at(-1);
             const tsFileName = join(chData.tsPath, name);
 
-            const tsRequest = await fetchRetry(tsN, { headers: headers });
+            const tsRequest = await fetchRetry(tsN, headers);
             await streamDownloadFile(tsFileName, tsRequest.body);
 
             // 檔案小於100kb 就重新下載一次
             const size = Math.ceil((await statSync(tsFileName)).size / 1024);
             if (size < 100) {
                 await delay();
-                const tsRequest = await fetchRetry(tsN, { headers: headers });
+                const tsRequest = await fetchRetry(tsN, headers);
                 await streamDownloadFile(tsFileName, tsRequest.body);
             }
 

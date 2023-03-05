@@ -25,9 +25,14 @@ export const indexWS = function (io: Server) {
             });
 
             socket.on("download", async (downloadRequest: IDownloadRequest) => {
-                const task = taskQueue[socket.id][downloadRequest.unixTimestamp];
-                await task.preDownload(downloadRequest.chioceChapterIndex);
-                task.download();
+                try {
+                    const task = taskQueue[socket.id][downloadRequest.unixTimestamp];
+                    await task.preDownload(downloadRequest.chioceChapterIndex);
+                    task.download();
+                }
+                catch (err) {
+                    console.log(err);
+                }
             });
 
             socket.on("deleteTask", async (unixTimestamp: number) => {
