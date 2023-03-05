@@ -12,6 +12,27 @@ async function streamDownloadFile(filePath: string, data: ReadableStream<Uint8Ar
     await finished(body.pipe(writeStream));
 }
 
+async function fetchRetry(url: string, headers?: { [key: string]: any }) {
+    let retry = 1;
+    let request;
+    while (!request) {
+        try {
+            if (retry >= 3) {
+                throw new Error(`url: ${url} 重試請求三次 都失敗`);
+            }
+            if (retry !== 1) {
+                await delay();
+            }
+            request = await fetch(url, { headers: headers });
+        }
+        catch (err) {
+            console.log(err);
+            retry++;
+        }
+    }
+    return request;
+}
+
 async function errorHandle(task: Task, err: Error) {
     if (task.data.browser) {
         await task.data.browser.close();
@@ -27,5 +48,6 @@ async function errorHandle(task: Task, err: Error) {
 export {
     delay,
     streamDownloadFile,
+    fetchRetry,
     errorHandle
 };

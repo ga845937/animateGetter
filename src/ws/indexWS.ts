@@ -1,9 +1,9 @@
 import { Server, Socket } from "socket.io";
 import { Task, IAnimateRequest, IDownloadRequest } from "../model/animateRequest";
 
-import { newMyself } from "../services/myself";
-import { newAnime1 } from "../services/anime1";
-import { newYoutube } from "../services/youtube";
+import { Myself } from "../services/myself";
+import { Anime1 } from "../services/anime1";
+import { Youtube } from "../services/youtube";
 import { ttlMinute } from "../config.json";
 
 interface TaskQueue {
@@ -64,11 +64,11 @@ export const indexWS = function (io: Server) {
 function genTask(socket: Socket, animateRequest: IAnimateRequest, unixTimestamp: number): Task {
     switch (animateRequest.animateWeb) {
         case "myself":
-            return newMyself(socket, animateRequest.animateUrl, unixTimestamp);
+            return new Myself(socket, animateRequest.animateUrl, unixTimestamp);
         case "anime1":
-            return newAnime1(socket, animateRequest.animateUrl, unixTimestamp);
+            return new Anime1(socket, animateRequest.animateUrl, unixTimestamp);
         case "youtube":
-            return newYoutube(socket, animateRequest.animateUrl, unixTimestamp);
+            return new Youtube(socket, animateRequest.animateUrl, unixTimestamp);
         default:
             throw new Error("網站選擇錯誤");
     }

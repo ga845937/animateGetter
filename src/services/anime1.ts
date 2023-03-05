@@ -1,5 +1,5 @@
 import { IChData, IAnime1, IDownloadInfo } from "../model/anime1";
-import { delay, streamDownloadFile, errorHandle } from "./utils";
+import { delay, fetchRetry, streamDownloadFile, errorHandle } from "./utils";
 import config from "../config.json";
 
 import { launch } from "puppeteer";
@@ -113,7 +113,7 @@ export class Anime1 {
                 const headers = mp4PageRequest.headers();
                 if (Object.keys(headers).includes("cookie")) {
                     if (headers.cookie.includes("; p=")) {
-                        const mp4Request = await fetch(mp4Url, { headers: headers });
+                        const mp4Request = await fetchRetry(mp4Url, { headers: headers });
                         await streamDownloadFile(finalName, mp4Request.body);
                         anime1.downloadEndIndx.push(chioceChapterIndex);
                     }
@@ -157,8 +157,4 @@ export class Anime1 {
         await this.preDownload(chioceChapterIndex);
         await this.download();
     }
-}
-
-export function newAnime1(socket: Socket, animateUrl: string, unixTimestamp: number) {
-    return new Anime1(socket, animateUrl, unixTimestamp);
 }

@@ -1,12 +1,12 @@
 import { IChData, IMyself, IGetMyselfTS, IDownloadInfo } from "../model/myself";
-import { delay, streamDownloadFile, errorHandle } from "./utils";
+import { delay, fetchRetry, streamDownloadFile, errorHandle } from "./utils";
 import config from "../config.json";
 
 import { launch } from "puppeteer";
 import { Socket } from "socket.io";
 import { writeFileSync, mkdirSync, existsSync, statSync, rmSync } from "fs";
 import { join } from "path";
-import ffmpeg, { FfmpegCommand } from "fluent-ffmpeg";
+import ffmpeg from "fluent-ffmpeg";
 
 export class Myself {
     socket: Socket;
@@ -51,7 +51,7 @@ export class Myself {
             const bname = await myself.page.title();
             myself.bname = bname.split("【")[0].replace(/([<>:"/\\|?*])/g, "");
             const chListDom = await myself.page.$$eval("ul.main_list a", anchors => anchors.map(y => [y.innerHTML.replace(/([<>:"/\\|?*])/g, "")]));
-            myself.chList = chListDom.filter(x => x[0] !== "站內" && x[0] !== "先鋒") as any;
+            myself.chList = chListDom.filter(x => x[0] !== "站內" && !x[0].includes("先鋒")) as any;
             myself.coverUrl = await myself.page.$eval(".info_img_box > img", img => img.src);
 
             const chListRes = {
@@ -75,7 +75,7 @@ export class Myself {
                 const chapterName = myself.chList[chapterIndex][0];
                 const tsPath = join(config.rootDir, myself.bname, chapterName);
                 const finalName = join(config.rootDir, myself.bname, `${myself.bname} - ${chapterName}.mp4`);
-                if (await existsSync(tsPath) || existsSync(finalName)) {
+                if (await existsSync(tsPath) || await existsSync(finalName)) {
                     this.socket.emit("status", `${myself.bname} - ${chapterName} 已存在`);
                     continue;
                 }
@@ -89,7 +89,7 @@ export class Myself {
             }
 
             await mkdirSync(join(config.rootDir, myself.bname), { recursive: true });
-            const coverRequest = await fetch(myself.coverUrl);
+            const coverRequest = await fetchRetry(myself.coverUrl);
             const coverPath = join(config.rootDir, myself.bname, "cover.jpg");
             await streamDownloadFile(coverPath, coverRequest.body);
             if (myself.chData.length > 0) {
@@ -144,11 +144,11 @@ export class Myself {
                     chData: chData,
                     socket: this.socket
                 };
-                const mergeVideo = await getMyselfTS(getMyselfTSData);
+                await getMyselfTS(getMyselfTSData);
                 const finalName = join(config.rootDir, myself.bname, `${myself.bname} - ${chData.chapterName}.mp4`);
                 this.socket.emit("status", `${myself.bname} - ${chData.chapterName} 開始合併`);
                 const mergeEndIndx = myself.mergeEndIndx;
-                await mergeTS(mergeVideo, finalName, mergeEndIndx, chData.chioceChapterIndex);
+                await mergeTS(chData.tsPath, finalName, mergeEndIndx, chData.chioceChapterIndex);
 
                 while (!mergeEndIndx.includes(chData.chioceChapterIndex)) {
                     this.socket.emit("status", `${myself.bname} - ${chData.chapterName} 合併中`);
@@ -185,13 +185,6 @@ export class Myself {
     }
 }
 
-// async function clickBtn(videoBtn: ElementHandle<HTMLAnchorElement>[]) {
-//     for (let i = 0; i < videoBtn.length; i++) {
-//         videoBtn[i].evaluate(b => b.click());
-//         await delay();
-//     }
-// }
-
 async function getMyselfTS(getMyselfTSData: IGetMyselfTS) {
     try {
         const { unixTimestamp, bname, chData, socket } = getMyselfTSData;
@@ -199,7 +192,7 @@ async function getMyselfTS(getMyselfTSData: IGetMyselfTS) {
             Referer: "https://v.myself-bbs.com/",
             origin: "https://v.myself-bbs.com/",
         };
-        const m3u8Request = await fetch(chData.m3u8Url, { headers: headers });
+        const m3u8Request = await fetchRetry(chData.m3u8Url, { headers: headers });
         const m3u8BaseUrl = chData.m3u8Url.split("/").slice(0, -1).join("/");
         const m3u8Text = await m3u8Request.text();
         const m3u8Path = join(chData.tsPath, "index.m3u8");
@@ -208,20 +201,18 @@ async function getMyselfTS(getMyselfTSData: IGetMyselfTS) {
         chData.tsLength = tsUrl.length;
         chData.downloadLength = 0;
 
-        const mergeVideo = ffmpeg();
         for (const tsN of tsUrl) {
             const name = tsN.split("/").at(-1);
             const tsFileName = join(chData.tsPath, name);
-            mergeVideo.addInput(tsFileName);
 
-            const tsRequest = await fetch(tsN, { headers: headers });
+            const tsRequest = await fetchRetry(tsN, { headers: headers });
             await streamDownloadFile(tsFileName, tsRequest.body);
 
             // 檔案小於100kb 就重新下載一次
             const size = Math.ceil((await statSync(tsFileName)).size / 1024);
             if (size < 100) {
                 await delay();
-                const tsRequest = await fetch(tsN, { headers: headers });
+                const tsRequest = await fetchRetry(tsN, { headers: headers });
                 await streamDownloadFile(tsFileName, tsRequest.body);
             }
 
@@ -240,7 +231,7 @@ async function getMyselfTS(getMyselfTSData: IGetMyselfTS) {
         }
 
         await delay(); // 等檔案真的放完在硬碟
-        return mergeVideo;
+        return;
     }
     catch (err) {
         err.preStack = new Error().stack;
@@ -248,25 +239,25 @@ async function getMyselfTS(getMyselfTSData: IGetMyselfTS) {
     }
 }
 
-async function mergeTS(mergeVideo: FfmpegCommand, finalName: string, mergeEndIndx: number[], chioceChapterIndex: number) {
+async function mergeTS(tsPath: string, finalName: string, mergeEndIndx: number[], chioceChapterIndex: number) {
     try {
-        mergeVideo.mergeToFile(finalName)
+        ffmpeg(join(tsPath, "index.m3u8"))
             // .on("progress", (progress) => {
-            //     console.log(finalName + " Processing: " + progress.percent + "% done");
+            //     console.log("Processing: " + progress.percent + "% done");
             // })
             .on("error", (err: Error) => {
                 throw err;
             })
             .on("end", () => {
                 mergeEndIndx.push(chioceChapterIndex);
-            });
+            })
+            .outputOptions("-c copy")
+            .outputOptions("-bsf:a aac_adtstoasc")
+            .output(finalName)
+            .run();
     }
     catch (err) {
         err.preStack = new Error().stack;
         throw err;
     }
-}
-
-export function newMyself(socket: Socket, animateUrl: string, unixTimestamp: number) {
-    return new Myself(socket, animateUrl, unixTimestamp);
 }

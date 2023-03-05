@@ -1,5 +1,5 @@
 import { IChData, IYoutube, IDownloadInfo } from "../model/youtube";
-import { delay, errorHandle } from "./utils";
+import { delay, fetchRetry, errorHandle } from "./utils";
 import config from "../config.json";
 
 import { launch } from "puppeteer";
@@ -209,7 +209,7 @@ export class Youtube {
             }
             for (const track of trackFilterLang) {
                 const subUrl = `${track.baseUrl}&fmt=vtt`;
-                const subRequest = await fetch(subUrl);
+                const subRequest = await fetchRetry(subUrl);
                 const srtTxt = vtt2srt(await subRequest.text());
                 writeFileSync(`${chapterName}.srt`, srtTxt);
             }
@@ -277,8 +277,4 @@ async function getPath(info: videoInfo) {
         }
     }
     return { videoPath, audioPath };
-}
-
-export function newYoutube(socket: Socket, animateUrl: string, unixTimestamp: number) {
-    return new Youtube(socket, animateUrl, unixTimestamp);
 }
