@@ -51,7 +51,7 @@ export class Myself {
             const bname = await myself.page.title();
             myself.bname = bname.split("【")[0].replace(/([<>:"/\\|?*])/g, "");
             const chListDom = await myself.page.$$eval("ul.main_list a", anchors => anchors.map(y => [y.innerHTML.replace(/([<>:"/\\|?*])/g, "")]));
-            myself.chList = chListDom.filter(x => x[0] !== "站內" && !x[0].includes("先鋒")) as any;
+            myself.chList = chListDom.filter(x => x[0] !== "站內" && x[0] !== "其他" && !x[0].includes("先鋒")) as any;
             myself.coverUrl = await myself.page.$eval(".info_img_box > img", img => img.src);
 
             const chListRes = {
@@ -174,7 +174,7 @@ export class Myself {
         catch (err) {
             err.stack += new Error().stack;
             errorHandle(this, err);
-			throw err;
+            throw err;
         }
     }
 
@@ -216,9 +216,9 @@ async function getMyselfTS(getMyselfTSData: IGetMyselfTS) {
             const tsRequest = await fetchRetry(tsN, headers);
             await streamDownloadFile(tsFileName, tsRequest.body);
 
-            // 檔案小於100kb 就重新下載一次
+            // 檔案小於10kb 就重新下載一次
             const size = Math.ceil((await statSync(tsFileName)).size / 1024);
-            if (size < 100) {
+            if (size < 10) {
                 await delay();
                 const tsRequest = await fetchRetry(tsN, headers);
                 await streamDownloadFile(tsFileName, tsRequest.body);
